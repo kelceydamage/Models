@@ -288,13 +288,14 @@ def documentation():
 # Main
 # ------------------------------------------------------------------------ 79->
 if __name__ == '__main__':
-    documentation()
-    Model = DiversityPredictionTheorem()
-    print(Model.run([2,5,4,9,2,1,4,3,3], 4))
-    Model = CondorcetJuryTheorem()
-    print(Model.run([0,1,0,0,1,1,0]))
-    Model = RSquared()
-    print(Model.run([1,3,2,5,4,8,5,7], [1,2,3,4,5,6,7,8]))
-    print(Model.residuals)
+    #documentation()
+    for i in range(1000):
+        Model = DiversityPredictionTheorem()
+        Model.run([2,5,4,9,2,1,4,3,3], 4)
+        Model = CondorcetJuryTheorem()
+        Model.run([0,1,0,0,1,1,0])
+        Model = RSquared()
+        Model.run([1,3,2,5,4,8,5,7], [1,2,3,4,5,6,7,8])
+        #print(Model.residuals)
     
  
